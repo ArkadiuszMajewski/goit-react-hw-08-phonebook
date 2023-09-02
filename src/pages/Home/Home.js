@@ -9,7 +9,7 @@ export default function Home() {
     <div className={css.container}>
       {isLoggedIn ? (
         <p>
-          <span>{user.name}, to see the list of click here -></span>
+          <span>{user.name}, to see the list of contacts click here - </span>
           <Link className={css.link} to="/contacts">
             contacts
           </Link>
