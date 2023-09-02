@@ -31,3 +31,6 @@
   flex-direction: column;
   font-size: large;
 }
+.link {
+  color: rgb(112, 27, 27);
+}
