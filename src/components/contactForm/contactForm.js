@@ -13,7 +13,8 @@ export const ContactsForm = () => {
     const form = event.target;
     const inputValue = form.elements.text.value;
     const contactExists = contacts.find(
-      contact => contact.name.toLowerCase() === inputValue.toLowerCase()
+      contact =>
+        contact.name.toLowerCase().trim() === inputValue.toLowerCase().trim()
     );
     if (contactExists) {
       alert(`${inputValue} is already in contacts.`);
