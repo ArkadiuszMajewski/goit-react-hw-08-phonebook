@@ -3,7 +3,6 @@ import { Button } from 'components/Button/Button';
 import css from './contactForm.module.css';
 import { selectTasks } from 'Redux/selectors';
 import { addContact } from 'Redux/actions';
-import { BiUser, BiPhone } from 'react-icons/bi';
 
 export const ContactsForm = () => {
   const dispatch = useDispatch();

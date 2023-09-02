@@ -1,10 +1,7 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import { useDispatch } from 'react-redux';
-import { useAuth } from 'hooks';
 import { refreshUser } from 'Redux/Auth/actions';
-import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
 const Navigation = lazy(() => import('./Navigation/Navigation'));
