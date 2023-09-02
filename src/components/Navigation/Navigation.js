@@ -1,4 +1,4 @@
-import { useAuth } from 'hooks';
+import { useAuth } from 'hooks/useAuth';
 import { lazy, Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import css from './Navigation.module.css';

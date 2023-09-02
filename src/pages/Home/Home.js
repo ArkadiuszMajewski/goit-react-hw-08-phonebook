@@ -1,4 +1,4 @@
-import { useAuth } from 'hooks';
+import { useAuth } from 'hooks/useAuth';
 import { Link } from 'react-router-dom';
 import css from './Home.module.css';
 
