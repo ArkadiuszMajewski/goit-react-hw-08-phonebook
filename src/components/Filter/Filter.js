@@ -11,12 +11,12 @@ export const ContactFilter = () => {
   const filter = useSelector(selectStatusFilter);
 
   const onChange = e => {
-    dispatch(change(e.target.value));
+    dispatch(change(e.currentTarget.value));
   };
 
   return (
     <div>
-      <label htmlFor={filterInputId}> Find contacts </label>
+      <label htmlFor={filterInputId}> Find contacts: </label>
       <input
         className={css.filter__input}
         id={filterInputId}
@@ -24,6 +24,7 @@ export const ContactFilter = () => {
         name="filter"
         value={filter}
         onChange={onChange}
+        placeholder="Enter name"
       ></input>
     </div>
   );

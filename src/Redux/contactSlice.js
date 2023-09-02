@@ -20,7 +20,6 @@ const tasksSlice = createSlice({
   },
 
   extraReducers: {
-    //fetchContact
     [fetchContacts.pending]: handlePending,
     [fetchContacts.rejected]: handleRejected,
     [fetchContacts.fulfilled](state, action) {
@@ -28,7 +27,7 @@ const tasksSlice = createSlice({
       state.error = null;
       state.items = action.payload;
     },
-    //addContact
+
     [addContact.pending]: handlePending,
     [addContact.rejected]: handleRejected,
     [addContact.fulfilled](state, action) {
@@ -36,7 +35,7 @@ const tasksSlice = createSlice({
       state.error = null;
       state.items.push(action.payload);
     },
-    //deleteContact
+
     [deleteContact.pending]: handlePending,
     [deleteContact.rejected]: handleRejected,
     [deleteContact.fulfilled](state, action) {

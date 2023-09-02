@@ -9,22 +9,22 @@ export default function Home() {
     <div className={css.container}>
       {isLoggedIn ? (
         <p>
-          {user.name}, to see the list of{' '}
+          <span>{user.name}, to see the list of click here -></span>
           <Link className={css.link} to="/contacts">
             contacts
           </Link>
         </p>
       ) : (
         <p>
-          hello, plase{' '}
+          <span>hello, plase </span>
           <Link to="/login" className={css.link}>
             login
-          </Link>{' '}
-          or{' '}
+          </Link>
+          <span> or </span>
           <Link className={css.link} to="/register">
-            register
-          </Link>{' '}
-          new phonebook list
+            <span>register</span>
+          </Link>
+          <span> new phonebook list</span>
         </p>
       )}
     </div>
