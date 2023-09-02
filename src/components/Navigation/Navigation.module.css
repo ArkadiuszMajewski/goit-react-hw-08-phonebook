@@ -18,6 +18,7 @@
 }
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   height: 41px;
@@ -29,4 +30,9 @@
   composes: navLink;
   text-decoration: underline;
   color: rgb(112, 27, 27);
+}
+.please {
+  position: fixed;
+  right: 50px;
+  font-size: large;
 }

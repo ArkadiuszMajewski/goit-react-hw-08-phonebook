@@ -10,8 +10,8 @@ export default function UserMenu() {
 
   return (
     <span className={css.position}>
-      {user.email}{' '}
-      <Button className={css.btn_style} onClick={() => dispatch(logOut())}>
+      <span> {user.email} </span>
+      <Button className={css.btnStyle} onClick={() => dispatch(logOut())}>
         Log Out
       </Button>
     </span>

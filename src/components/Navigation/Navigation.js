@@ -31,6 +31,7 @@ export default function Navigation() {
               <NavLink className={navLink} to="/login" end>
                 LOGIN
               </NavLink>
+              <span className={css.please}>Please login</span>
             </>
           )}
         </nav>
