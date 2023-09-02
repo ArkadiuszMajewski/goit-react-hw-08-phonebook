@@ -22,7 +22,7 @@
   align-items: center;
   height: 41px;
   box-shadow: inset 0px -7px 7px 0px rgb(54, 138, 190);
-  /* margin-bottom: 10px; */
+  background-color: rgb(255, 255, 255);
 }
 
 .active {
