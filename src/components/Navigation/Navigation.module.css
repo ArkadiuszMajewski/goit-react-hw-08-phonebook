@@ -32,7 +32,7 @@
   color: rgb(112, 27, 27);
 }
 .please {
-  position: fixed;
+  position: absolute;
   right: 50px;
   font-size: large;
 }
