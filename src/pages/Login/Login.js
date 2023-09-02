@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from 'Redux/Auth/actions';
 import css from './Login.module.css';
 import { useAuth } from 'hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -47,6 +48,12 @@ export default function Login() {
       </Button>
     </form>
   ) : (
-    <div className={css.logedIn}>you alredy logged in</div>
+    <div className={css.logedIn}>
+      <p>you alredy logged in</p>
+      <p>to see contact list click here</p>
+      <Link className={css.link} to="/contacts">
+        contacts
+      </Link>
+    </div>
   );
 }
