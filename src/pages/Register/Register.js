@@ -24,6 +24,7 @@ export default function Register() {
       <label>Enter your name</label>
 
       <input
+        autoComplete="username"
         className={css.inputs}
         type="text"
         name="name"
@@ -43,6 +44,7 @@ export default function Register() {
 
       <label>Enter your password</label>
       <input
+        autoComplete="current-password"
         placeholder="password"
         className={css.inputs}
         type="password"
