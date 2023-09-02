@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks';
-import { refreshUser } from 'Redux/Auth/operations';
+import { refreshUser } from 'Redux/Auth/actions';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
@@ -29,16 +29,13 @@ export const App = () => {
           <Route
             path="/register"
             element={
-              <RestrictedRoute
-                redirectTo="/contacts"
-                component={<Register />}
-              />
+              <PrivateRoute redirectTo="/contacts" component={<Register />} />
             }
           />
           <Route
             path="/login"
             element={
-              <RestrictedRoute redirectTo="/contacts" component={<Login />} />
+              <PrivateRoute redirectTo="/contacts" component={<Login />} />
             }
           />
           <Route

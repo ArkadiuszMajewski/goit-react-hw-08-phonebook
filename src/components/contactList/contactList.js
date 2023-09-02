@@ -1,6 +1,6 @@
 import { Button } from 'components/Button/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from 'Redux/operations';
+import { deleteContact } from 'Redux/actions';
 import { selectStatusFilter, selectTasks } from 'Redux/selectors';
 import css from './contactList.module.css';
 

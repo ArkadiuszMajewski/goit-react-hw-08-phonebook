@@ -1,40 +1,36 @@
 import { useAuth } from 'hooks';
 import { lazy, Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import styled from 'styled-components';
 import css from './Navigation.module.css';
 
 const UserMenu = lazy(() => import('components/Usermenu/Usermenu'));
 
 export default function Navigation() {
-  const StyledLink = styled(NavLink)`
-    &.active {
-      color: rgb(112, 27, 27);
-    }
-  `;
   const { isLoggedIn } = useAuth();
+  const navLink = ({ isActive }) => (isActive ? css['active'] : css['navLink']);
+
   return (
     <>
       <header className={css.header}>
         <nav>
-          <StyledLink className={css.nav__link} to="/" end>
+          <NavLink className={navLink} to="/" end>
             HOME
-          </StyledLink>
+          </NavLink>
           {isLoggedIn ? (
             <>
-              <StyledLink className={css.nav__link} to="/contacts" end>
+              <NavLink className={navLink} to="/contacts" end>
                 PHONEBOOK
-              </StyledLink>
+              </NavLink>
               <UserMenu />
             </>
           ) : (
             <>
-              <StyledLink className={css.nav__link} to="/register" end>
-                Register
-              </StyledLink>
-              <StyledLink className={css.nav__link} to="/login" end>
-                Login
-              </StyledLink>
+              <NavLink className={navLink} to="/register" end>
+                REGISTER
+              </NavLink>
+              <NavLink className={navLink} to="/login" end>
+                LOGIN
+              </NavLink>
             </>
           )}
         </nav>

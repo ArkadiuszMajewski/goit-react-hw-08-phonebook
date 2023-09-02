@@ -1,6 +1,6 @@
 import { useAuth } from 'hooks';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'Redux/Auth/operations';
+import { logOut } from 'Redux/Auth/actions';
 import css from './Usermenu.module.css';
 import { Button } from 'components/Button/Button';
 

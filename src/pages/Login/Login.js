@@ -1,6 +1,6 @@
 import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'Redux/Auth/operations';
+import { logIn } from 'Redux/Auth/actions';
 import css from './Login.module.css';
 
 export default function Login() {
@@ -19,16 +19,16 @@ export default function Login() {
   };
   return (
     <form className={css.container} onSubmit={handleSubmit}>
-      <label>Mail</label>
+      <p>login please</p>
+      <label>enter your email</label>
       <input
         className={css.inputs}
         type="email"
         name="email"
-        // pattern=".+@globex\.com"
-        placeholder="user@ukr.net"
+        placeholder="email"
         required
       ></input>
-      <label>pass</label>
+      <label>enter your password</label>
       <input
         className={css.inputs}
         type="password"
@@ -36,6 +36,7 @@ export default function Login() {
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
+        placeholder="password"
       ></input>
       <Button style={{ padding: '5px 10px' }} type="submit">
         Login

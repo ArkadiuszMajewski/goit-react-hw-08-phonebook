@@ -1,6 +1,6 @@
 import { Button } from 'components/Button/Button';
 import { useDispatch } from 'react-redux';
-import { register } from 'Redux/Auth/operations';
+import { register } from 'Redux/Auth/actions';
 import css from './Register.module.css';
 
 export default function Register() {
@@ -21,7 +21,8 @@ export default function Register() {
   };
   return (
     <form onSubmit={handleSubmit} className={css.container}>
-      <label>Name</label>
+      <label>Enter your name</label>
+
       <input
         className={css.inputs}
         type="text"
@@ -29,21 +30,27 @@ export default function Register() {
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
-        placeholder="Enter name..."
+        placeholder="name"
       />
-      <label>Mail</label>
+      <label>Enter your email</label>
       <input
         className={css.inputs}
         type="email"
         name="email"
-        // pattern=".+@globex\.com"
-        placeholder="user@ukr.net"
+        placeholder="email"
         required
       ></input>
-      <label>Password</label>
-      <input className={css.inputs} type="password" name="password" required />
+
+      <label>Enter your password</label>
+      <input
+        placeholder="password"
+        className={css.inputs}
+        type="password"
+        name="password"
+        required
+      />
+
       <Button style={{ padding: '5px 10px' }} type="submit">
-        {' '}
         Register
       </Button>
     </form>
