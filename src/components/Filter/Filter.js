@@ -18,7 +18,7 @@ export const ContactFilter = () => {
     <div>
       <label htmlFor={filterInputId}> Find contacts: </label>
       <input
-        className={css.filter__input}
+        className={css.filterInput}
         id={filterInputId}
         type="text"
         name="filter"

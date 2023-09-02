@@ -16,14 +16,12 @@ export const ContactList = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <ul className={css.contact__list}>
+      <ul className={css.contactList}>
         {normalizedContacts.map(contact => (
-          <li key={contact.id} className={css.contact__list__item}>
-            <div className={css.contact__style}>
-              <span className={css.contact__list__name}>{contact.name}</span>
-              <span className={css.contact__list__number}>
-                : {contact.number}
-              </span>
+          <li key={contact.id} className={css.contactListItem}>
+            <div className={css.contactStyle}>
+              <span className={css.contactListName}>{contact.name}</span>
+              <span className={css.contactListNumber}>: {contact.number}</span>
             </div>
             <Button onClick={() => dispatch(deleteContact(contact.id))}>
               Delete
