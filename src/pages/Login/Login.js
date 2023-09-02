@@ -9,7 +9,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const { user } = useAuth();
 
-  console.log(user);
+  // console.log(user);
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
